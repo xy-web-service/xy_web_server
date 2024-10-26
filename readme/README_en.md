@@ -14,7 +14,7 @@
 
 ## Description
 
-xy-web-service Service settings module.
+xy-web-service Server module.
 
 ## Source Code Repositories
 
@@ -24,12 +24,14 @@ xy-web-service Service settings module.
 ## 安装
 
 ```bash
+# bash
 pip install xy_web_server
 ```
 
 ## How to use
 
 ```bash
+# bash
 xy_web_server -c project -n xy_web_server_demo
 # 创建项目 [ xy_web_server_demo ] 成功!!!
 # 项目路径 ==>>> /mnt/bs-media/Workspace/project/opensource/xy-web-service/xy_web_server/test/xy_web_server_demo

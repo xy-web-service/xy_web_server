@@ -14,7 +14,7 @@
 
 ## 说明
 
-xy-web-service服务设置模块.
+xy-web-service服务模块.
 
 ## 源码仓库
 
@@ -24,19 +24,21 @@ xy-web-service服务设置模块.
 ## 安装
 
 ```bash
+# bash
 pip install xy_web_server
 ```
 
 ## 使用
 
 ```bash
+# bash
 xy_web_server -c project -n xy_web_server_demo
 # 创建项目 [ xy_web_server_demo ] 成功!!!
 # 项目路径 ==>>> /mnt/bs-media/Workspace/project/opensource/xy-web-service/xy_web_server/test/xy_web_server_demo
 
 cd xy_web_server_demo
 xy_web_server
-# >>>>>>>>>>>> xy_web_server - v1.0.1 <<<<<<<<<<<<<
+# >>>>>>>>>>>> xy_web_server_demo - v1.0.1 <<<<<<<<<<<<<
 #
 # Hello World!!!
 ```
