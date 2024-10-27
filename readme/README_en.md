@@ -21,7 +21,7 @@ xy-web-service Server module.
 - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github</a>  
 - <a href="https://gitee.com/xy-web-service/xy_web_server.git" target="_blank">Gitee</a>
 
-## 安装
+## Installation
 
 ```bash
 # bash
@@ -49,7 +49,6 @@ xy_web_server is licensed under the <Mulan Permissive Software License，Version
 ## Donate
 
 If you think these tools are pretty good, Can you please have a cup of coffee?  
-
 ![Pay-Total](./Pay-Total.png)  
 
 
