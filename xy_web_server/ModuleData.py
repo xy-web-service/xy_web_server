@@ -11,7 +11,6 @@ __doc__ = "ModuleData"
   * @Desc    :   None
 """
 
-from pathlib import Path
 import xy_web_server
 from importlib_resources import files
 

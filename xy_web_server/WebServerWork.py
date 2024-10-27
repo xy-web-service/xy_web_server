@@ -10,21 +10,15 @@ __doc__ = "WebServerWork"
   * @License :   (C)Copyright 2019-2023, Ship of Ocean
   * @Desc    :   None
 """
-import logging
-import shutil
-from pathlib import Path
-from argparse import ArgumentParser
-
-from xy_file.File import File
 
 import xy_web_server
 from .Work import Work
 from .Settings.Settings import Settings
-from .ModuleData import ModuleData
 
 
 class WebServerWork(Work):
     settings: Settings | None = Settings()
 
-    prog: str = xy_web_server.__name__
-    description: str = f""">>>>>>>>>>>> {xy_web_server.__name__} - v{xy_web_server.__version__} <<<<<<<<<<<<<"""
+    def __init__(self):
+        self.prog = xy_web_server.__name__
+        self.description = f""">>>>>>>>>>>> {xy_web_server.__name__} - v{xy_web_server.__version__} <<<<<<<<<<<<<"""
