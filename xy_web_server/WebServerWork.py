@@ -20,5 +20,5 @@ class WebServerWork(Work):
     settings: Settings | None = Settings()
 
     def __init__(self):
-        self.prog = xy_web_server.__name__
-        self.description = f""">>>>>>>>>>>> {xy_web_server.__name__} - v{xy_web_server.__version__} <<<<<<<<<<<<<"""
+        self.quick_default_info(xy_web_server.__name__)
+        self.description = "Web服务工作应用"
