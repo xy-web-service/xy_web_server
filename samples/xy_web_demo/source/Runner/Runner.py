@@ -11,7 +11,7 @@ class Runner(Work):
         return __version__
 
     def get_name(self) -> str:
-        return "test_web_server"
+        return "xy_web_demo"
 
     def __init__(self, *args, **kwargs) -> None:
         description: str = f""">>>>>>>>>>>> {self.get_name()} - v{self.__version__} <<<<<<<<<<<<<"""
