@@ -21,27 +21,16 @@ class ModuleData:
 
         self.template_path = self.path.joinpath("template")
 
-        self.nginx_path = self.template_path.joinpath("nginx")
+        ############################## Config #############################
 
-        self.nginx_servers_conf_path = self.nginx_path.joinpath(
-            "nginx_servers_conf.template"
-        )
-        self.nginx_server_conf_path = self.nginx_path.joinpath(
-            "nginx_server_conf.template"
-        )
-        self.nginx_location_conf_path = self.nginx_path.joinpath(
-            "nginx_location_conf.template"
+        self.config_path = self.template_path.joinpath("config")
+
+        self.work_toml_template_path = self.config_path.joinpath(
+            "xy_web_server_toml.template"
         )
 
-        self.nginx_servers_json_path = self.nginx_path.joinpath("nginx_servers.json")
-        self.nginx_server_json_path = self.nginx_path.joinpath("nginx_server.json")
-        self.nginx_location_json_path = self.nginx_path.joinpath("nginx_location.json")
+        ############################## Runner #############################
 
         self.runner_path = self.template_path.joinpath("runner")
-        self.runner_py_path = self.runner_path.joinpath("runner_py.template")
 
-        self.site_path = self.template_path.joinpath("site")
-        self.site_application_path = self.site_path.joinpath("application")
-        self.site_application_tornado_path = self.site_application_path.joinpath(
-            "tornado"
-        )
+        self.runner_py_template_path = self.runner_path.joinpath("runner_py.template")

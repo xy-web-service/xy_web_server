@@ -2,7 +2,7 @@
 __doc__ = "Runner.py"
 __version__ = "0.0.1"
 
-from xy_web_work.WebServerWork import WebServerWork
+from xy_web_server.WebServerWork import WebServerWork
 
 
 class Runner(WebServerWork):
@@ -17,4 +17,4 @@ class Runner(WebServerWork):
         description: str = f""">>>>>>>>>>>> {{self.get_name()}} - v{{self.__version__}} <<<<<<<<<<<<<"""
         print(description)
         print()
-        print("Hello World!!!")
+        print("xy_web_server Hello World!!!")

@@ -12,7 +12,10 @@ __doc__ = "Work"
 """
 
 from xy_web_work.WebWork import WebWork as xyWebWork
+from .Settings.Settings import Settings
+from .ModuleData import ModuleData
 
 
 class Work(xyWebWork):
-    pass
+    settings: Settings | None = Settings()
+    module_data: ModuleData = ModuleData()

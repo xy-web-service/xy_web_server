@@ -13,11 +13,9 @@ __doc__ = "WebServerWork"
 
 import xy_web_server
 from .Work import Work
-from .Settings.Settings import Settings
 
 
 class WebServerWork(Work):
-    settings: Settings | None = Settings()
 
     def __init__(self):
         self.quick_default_info(xy_web_server.__name__)
