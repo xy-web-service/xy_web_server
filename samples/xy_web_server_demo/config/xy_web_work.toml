@@ -6,19 +6,19 @@
 [project]
 
 # 项目名称, 仅支持英文
-name = "xy_web_demo"
+name = "xy_web_server_demo"
 
 # 项目标识
-identifier = "baf6dfdf851a4a0790e813f9cd71571d"
+identifier = "d38c56f5d3e348179c61d3ff31fc7487"
 
 # 项目名称, 支持中英文
-verbose_name = "xy_web_demo"
+verbose_name = "xy_web_server_demo"
 
 # 项目说明, 支持中英文
-description = "xy_web_demo"
+description = "xy_web_server_demo"
 
 # 项目路径
-path = "/mnt/bs-media/Workspace/project/opensource/xy-web-service/xy_web_server/samples/xy_web_demo"
+path = "/mnt/bs-media/Workspace/project/opensource/xy-web-service/xy_web_server/samples/xy_web_server_demo"
 
 # ######################## xy_web_server运行配置 ###########################
 

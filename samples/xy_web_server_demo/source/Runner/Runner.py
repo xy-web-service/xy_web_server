@@ -11,7 +11,7 @@ class Runner(WebServerWork):
         return __version__
 
     def get_name(self) -> str:
-        return "xy_web_demo"
+        return "xy_web_server_demo"
 
     def __init__(self, *args, **kwargs) -> None:
         description: str = (
@@ -20,3 +20,15 @@ class Runner(WebServerWork):
         print(description)
         print()
         print("xy_web_server Hello World!!!")
+        self.default_parser()
+        self.add_arguments()
+        self.run_arguments()
+
+    def on_arguments(
+        self,
+        name,
+        value,
+        arguments=None,
+    ):
+        print(f"on_arguments {value}")
+        return True

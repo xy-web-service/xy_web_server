@@ -40,8 +40,10 @@ cd xy_web_server_demo
 xy_web_server
 # >>>>>>>>>>>> xy_web_server_demo - v1.0.1 <<<<<<<<<<<<<
 #
-# Hello World!!!
+# xy_web_server Hello World!!!
 ```
+
+> <b>提示: </b> 运行tornado web服务请参考 [案例](./samples/xy_web_server_demo)
 
 ## 许可证
 xy_web_server 根据 <木兰宽松许可证, 第2版> 获得许可。有关详细信息，请参阅 [LICENSE](LICENSE) 文件。

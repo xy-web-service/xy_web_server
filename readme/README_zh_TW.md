@@ -40,7 +40,7 @@ cd xy_web_server_demo
 xy_web_server
 # >>>>>>>>>>>> xy_web_server - v1.0.1 <<<<<<<<<<<<<
 #
-# Hello World!!!
+# xy_web_server Hello World!!!
 ```
 
 ## 許可證
