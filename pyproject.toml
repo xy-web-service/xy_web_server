@@ -17,7 +17,8 @@ classifiers = ["Programming Language :: Python :: 3"]
 
 dependencies = [
     "importlib_resources",
-
+    "django",
+    "tornado",
     "crossplane",
 
     "xy_singleton",

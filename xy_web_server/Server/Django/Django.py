@@ -34,8 +34,7 @@ class Django:
         python_path: str = "python",
     ) -> list | None:
         if (
-            not isinstance(manage_path, Path)
-            or not manage_path.exists()
+            (isinstance(manage_path, Path) and not manage_path.exists())
             or not os.access(manage_path, os.X_OK)
             or is_empty_string(python_path)
             or is_empty_string(host)
@@ -144,7 +143,11 @@ class Django:
         *args,
         **kwargs,
     ) -> list | None:
-        if is_empty_string(str(manage_path)) or not isinstance(manage_path, Path):
+        if (
+            is_empty_string(str(manage_path))
+            or (isinstance(manage_path, Path) and not manage_path.exists())
+            or not os.access(manage_path, os.X_OK)
+        ):
             return None
         if not isinstance(python, str):
             python = "python"

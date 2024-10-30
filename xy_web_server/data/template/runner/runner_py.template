@@ -17,4 +17,4 @@ class Runner(WebServerWork):
         description: str = f""">>>>>>>>>>>> {{self.get_name()}} - v{{self.__version__}} <<<<<<<<<<<<<"""
         print(description)
         print()
-        print("xy_web_server Hello World!!!")
+        print(f"{{self.get_name()}} Hello World!!!")

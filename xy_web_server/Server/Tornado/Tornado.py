@@ -11,13 +11,12 @@ __doc__ = "Tornado"
   * @Desc    :   None
 """
 import asyncio
-from email.mime import application
 import getpass
 import os
 from pathlib import Path
 from xy_file.File import File
-, empty_value
-from xy_string.String import is_empty_string, contains_zh
+from xy_type.utils import empty_value
+from xy_string.utils import is_empty_string, contains_zh
 
 from xy_web_server.ModuleData import ModuleData
 from tornado.web import Application
@@ -63,7 +62,10 @@ class Tornado:
         return settings
 
     def make_server(
-        self, application: Application, bind: int = 8080, cpu_count: int = 0
+        self,
+        application: Application,
+        bind: int = 8080,
+        cpu_count: int = 0,
     ) -> HTTPServer | None:
         if not application or bind < 0:
             return None

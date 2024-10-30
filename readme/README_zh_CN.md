@@ -41,7 +41,95 @@ cd xy_web_server_demo
 xy_web_server
 # >>>>>>>>>>>> xy_web_server - v1.0.1 <<<<<<<<<<<<<
 #
-# xy_web_server Hello World!!!
+# xy_web_server_demo Hello World!!!
+```
+
+> <b>提示: </b> 运行Tornado与Django web服务请参考 [案例](../samples/xy_web_server_demo)
+
+## Web服务开发
+
+### 1. 创建项目
+```bash
+# bash
+xy_web_server -c project -n xy_web_server_demo
+# 创建项目 [ xy_web_server_demo ] 成功!!!
+# 项目路径 ==>>> /mnt/bs-media/Workspace/project/opensource/xy-web-service/xy_web_server/test/xy_web_server_demo
+
+cd xy_web_server_demo
+xy_web_server
+# >>>>>>>>>>>> xy_web_server_demo - v1.0.1 <<<<<<<<<<<<<
+#
+# xy_web_server_demo Hello World!!!
+```
+
+### 2. 接入Django服务和Django-ORM, Tornado
+
+> 具体请参考 [Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py)
+
+#### 1. 加载Django设置
+
+> <b>注意: </b> 加载Django要在引入Tornado的RequestHandler早, 这样才能够在Tornado的RequestHandler中调用Django的模型
+```python
+# Runner.py
+admin_path = Path.cwd().joinpath("source/Runner/Admin/").resolve().as_posix()
+sys.path.insert(0, admin_path)
+# 若需要使用Django-orm调用该函数
+Django().load("xy_web_server_demo.settings")
+```
+
+#### 2. 接入manage.py管理
+
+[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 文件中的django_manage方法等同于
+
+```bash
+# bash
+# ../samples/xy_web_server_demo/source/Runner/Admin/manage.py
+python manage.py 后续参数...
+```
+
+
+例如: 
+```bash
+# bash
+xy_web_server -w django shell
+#相当于
+
+cd xy_web_server_demo/source/Runner/Admin
+
+python manage.py shell
+
+#############################################################################
+# 同步数据表, 在每次启动服务之前需要同步数据表
+xy_web_server -w django makemigrations
+xy_web_server -w django migrate
+
+```
+
+#### 3. 启动Django服务
+
+[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 文件中的 django_start 方法等同于
+```bash
+# ../samples/xy_web_server_demo/source/Runner/Admin/manage.py
+python manage.py runserver 127.0.0.1:8401
+```
+
+例如: 
+```bash
+# bash
+xy_web_server -w django start
+#相当于
+
+cd xy_web_server_demo/source/Runner/Admin
+
+python manage.py runserver 127.0.0.1:8401
+```
+
+#### 4. 启动Tornado服务
+
+[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 文件中的 tornado_start 方法
+```bash
+# bash
+xy_web_server -w tornado start
 ```
 
 ## 许可证
