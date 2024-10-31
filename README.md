@@ -103,6 +103,8 @@ xy_web_server -w django migrate
 
 #### 3. 启动Django服务
 
+> <b>注意: </b> 后台用户名: root  密码: 1
+
 [Runner.py](./samples/xy_web_server_demo/source/Runner/Runner.py) 文件中的 django_start 方法等同于
 ```bash
 # bash

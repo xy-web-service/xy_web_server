@@ -106,6 +106,8 @@ xy_web_server -w django migrate
 
 #### 3. Start the Django service
 
+> <b>Tip: </b> Admin Username: root  Password: 1
+
 The django_start method in the [Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) file is equivalent to
 ```bash
 # bash
