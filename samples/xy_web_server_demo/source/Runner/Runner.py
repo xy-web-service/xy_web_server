@@ -83,6 +83,12 @@ class Runner(WebServerWork, Tornado, Django):
     # 运行 xy_web_server -w django help
     def django_manage(self, work_args: list):
         print(f"django_manage {work_args}")
+        admin_path = (
+            self.settings.settings_dir_path.joinpath("../source/Runner/Admin")
+            .resolve()
+            .as_posix()
+        )
+        os.chdir(admin_path)
         manage_path = (
             self.settings.settings_dir_path.joinpath("../source/Runner/Admin/manage.py")
             .resolve()

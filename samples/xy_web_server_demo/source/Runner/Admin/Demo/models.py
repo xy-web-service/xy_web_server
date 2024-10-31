@@ -43,4 +43,4 @@ class MDemo(models.Model):
         app_label = "Demo"
 
     def __str__(self):
-        return f"{self.id}. {self.update_at})"
+        return f"{self.id}. {self.update_at} - {self.text}"
