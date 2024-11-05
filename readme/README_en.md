@@ -19,7 +19,8 @@ xy-web-service Server module.
 ## Source Code Repositories
 
 - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github</a>  
-- <a href="https://gitee.com/xy-web-service/xy_web_server.git" target="_blank">Gitee</a>
+- <a href="https://gitee.com/xy-opensource/xy_web_server.git" target="_blank">Gitee</a>  
+- <a href="https://gitcode.com/xy-opensource/xy_web_server.git" target="_blank">GitCode</a>  
 
 ## Installation
 
