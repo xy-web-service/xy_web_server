@@ -14,7 +14,7 @@ import asyncio
 import getpass
 import os
 from pathlib import Path
-from xy_file.File import File
+from xy_file.Object.File import File
 from xy_type.utils import empty_value
 from xy_string.utils import is_empty_string, contains_zh
 

@@ -2,28 +2,27 @@
  * @Author: 余洋 yuyangit.0515@qq.com
  * @Date: 2024-10-18 13:02:22
  * @LastEditors: 余洋 yuyangit.0515@qq.com
- * @LastEditTime: 2024-10-23 20:52:11
- * @FilePath: /xy_web_server/readme/README_zh_CN.md
+ * @LastEditTime: 2024-10-23 20:51:56
+ * @FilePath: /xy_web_server/readme/README.zh-hant.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 # xy_web_server
 
-- [简体中文](README_zh_CN.md)
-- [繁体中文](README_zh_TW.md)
-- [English](README_en.md)
+- [简体中文](../README.md)
+- [繁體中文](README.zh-hant.md)
+- [English](README.en.md)
 
+## 說明
 
-## 说明
+xy-web-service服務模組。
 
-xy-web-service服务模块.
+## 程式碼庫
 
-## 源码仓库
+- <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github位址</a>  
+- <a href="https://gitee.com/xy-opensource/xy_web_server.git" target="_blank">Gitee位址</a>  
+- <a href="https://gitcode.com/xy-opensource/xy_web_server.git" target="_blank">GitCode位址</a>  
 
-- <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github地址</a>  
-- <a href="https://gitee.com/xy-opensource/xy_web_server.git" target="_blank">Gitee地址</a>  
-- <a href="https://gitcode.com/xy-opensource/xy_web_serveri.git" target="_blank">GitCode地址</a>  
-
-## 安装
+## 安裝
 
 ```bash
 # bash
@@ -47,9 +46,9 @@ xy_web_server
 
 > <b>提示: </b> 运行Tornado与Django web服务请参考 [案例](../samples/xy_web_server_demo)
 
-## Web服务开发
+## Web服務開發
 
-### 1. 创建项目
+### 1. 創建專案
 ```bash
 # bash
 xy_web_server -c project -n xy_web_server_demo
@@ -63,13 +62,13 @@ xy_web_server
 # xy_web_server_demo Hello World!!!
 ```
 
-### 2. 接入Django服务和Django-ORM, Tornado
+### 2. 接入Django服務和Django-ORM, Tornado
 
-> 具体请参考 [Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py)
+> 具體請參考 [Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py)
 
-#### 1. 加载Django设置
+#### 1. 加載Django設定
 
-> <b>注意: </b> 加载Django要在引入Tornado的RequestHandler早, 这样才能够在Tornado的RequestHandler中调用Django的模型
+> <b>注意: </b> 載入Django要在引入Tornado的RequestHandler早, 這樣才能夠在Tornado的RequestHandler中調用Django的模型
 ```python
 # Runner.py
 admin_path = Path.cwd().joinpath("source/Runner/Admin/").resolve().as_posix()
@@ -78,14 +77,14 @@ sys.path.insert(0, admin_path)
 Django().load("xy_web_server_demo.settings")
 ```
 
-#### 2. 接入manage.py管理
+#### 2. 接取manage.py管理
 
-[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 文件中的django_manage方法等同于
+[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 檔案中的django_manage方法等同於
 
 ```bash
 # bash
 # ../samples/xy_web_server_demo/source/Runner/Admin/manage.py
-python manage.py 后续参数...
+python manage.py 後續參數...
 ```
 
 
@@ -106,11 +105,11 @@ xy_web_server -w django migrate
 
 ```
 
-#### 3. 启动Django服务
+#### 3. 啟動Django服務
 
-> <b>注意: </b> 后台用户名: root  密码: 1
+> <b>注意: </b> 後台使用者名稱: root 密碼: 1
 
-[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 文件中的 django_start 方法等同于
+[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 檔案中的 django_start 方法等同於
 ```bash
 # ../samples/xy_web_server_demo/source/Runner/Admin/manage.py
 python manage.py runserver 127.0.0.1:8401
@@ -127,26 +126,25 @@ cd xy_web_server_demo/source/Runner/Admin
 python manage.py runserver 127.0.0.1:8401
 ```
 
-#### 4. 启动Tornado服务
+#### 4. 啟動Tornado服務
 
-[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 文件中的 tornado_start 方法
+[Runner.py](../samples/xy_web_server_demo/source/Runner/Runner.py) 檔案中的 tornado_start 方法
 ```bash
 # bash
 xy_web_server -w tornado start
 ```
 
-## 许可证
-xy_web_server 根据 <木兰宽松许可证, 第2版> 获得许可。有关详细信息，请参阅 [LICENSE](../LICENSE) 文件。
+## 許可證
+xy_web_server 根據 <木蘭寬鬆許可證, 第2版> 獲得許可。有關詳細信息，請參閱 [LICENSE](../LICENSE) 文件。
 
-## 捐赠
+## 捐贈
 
-如果小伙伴们觉得这些工具还不错的话，能否请咱喝一杯咖啡呢?  
+如果小夥伴們覺得這些工具還不錯的話，能否請咱喝一杯咖啡呢?  
 ![Pay-Total](./Pay-Total.png)
 
-
-## 联系方式
+## 聯繫方式
 
 ```
 微信: yuyangiit
-邮箱: yuyangit.0515@qq.com
+郵箱: yuyangit.0515@qq.com
 ```
